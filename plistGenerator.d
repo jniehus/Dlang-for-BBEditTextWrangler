@@ -143,13 +143,13 @@ string plistWrap(string key) {
 void main()
 {
     string[] deprecatedModules = ["std.cpuid", "std.ctype", "std.date", "std.gregorian", "std.regexp"];
-    string dlangOrgStd = "/Users/joshuaniehus/GIT/d-programming-language.org/std_consolidated_header.dd";
+    string dlangOrgStd = "/Users/joshuaniehus/GIT/d-programming-language.org/std.ddoc";
     string dlangOrgLex = "/Users/joshuaniehus/GIT/d-programming-language.org/lex.dd";
     auto ddStdDoc = std.stdio.File(dlangOrgStd, "r");
     auto ddLexDoc = std.stdio.File(dlangOrgLex, "r");
     
     foreach(string line; lines(ddStdDoc)) {
-        auto m = match(line, regex(r">[a-z]{1,99}\.[a-z]{1,99}</a>\)|>[a-z]{1,99}\.[a-z]{1,99}\.[a-z]{1,99}</a>\)"));
+        auto m = match(line, regex(r"(>[a-z]{1,99}\.[a-z0-9]{1,99}</a>\))|(>[a-z]{1,99}\.[a-z0-9]{1,99}\.[a-z0-9]{1,99}</a>\))"));
         if (m) {
             string phobosModule = m.hit()[1 .. $-5]; // shave off the > and the </a>)
             if (find(deprecatedModules, phobosModule) == []) {
@@ -199,5 +199,7 @@ void main()
     std.stream.File f = new std.stream.File();
     f.create("DCodelessLanguageModule.plist");
     f.writeString(plist);
-    writeln(plist);    
+    writeln(plist);
+    
+    writeln(keywords.length + specialTokens.length + phobosModules.length);    
 }

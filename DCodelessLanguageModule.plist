@@ -133,6 +133,8 @@
       <string>__VERSION__</string>
       <string>std.algorithm</string>
       <string>std.array</string>
+      <string>std.ascii</string>
+      <string>std.base64</string>
       <string>std.bigint</string>
       <string>std.bitmanip</string>
       <string>std.compiler</string>
@@ -141,6 +143,7 @@
       <string>std.container</string>
       <string>std.contracts</string>
       <string>std.conv</string>
+      <string>std.csv</string>
       <string>std.datetime</string>
       <string>std.demangle</string>
       <string>std.encoding</string>
@@ -152,10 +155,12 @@
       <string>std.json</string>
       <string>std.math</string>
       <string>std.mathspecial</string>
+      <string>std.md5</string>
       <string>std.metastrings</string>
       <string>std.mmfile</string>
       <string>std.numeric</string>
       <string>std.outbuffer</string>
+      <string>std.parallelism</string>
       <string>std.path</string>
       <string>std.process</string>
       <string>std.random</string>
@@ -191,12 +196,15 @@
       <string>std.c.string</string>
       <string>std.c.time</string>
       <string>std.c.wcharh</string>
+      <string>std.net.curl</string>
+      <string>std.net.isemail</string>
       <string>std.windows.charset</string>
       <string>std.windows</string>
       <string>std.linux</string>
       <string>std.c.windows</string>
       <string>std.c.linux</string>
       <string>etc.c.curl</string>
+      <string>etc.c.sqlite3</string>
       <string>etc.c.zlib</string>
       <string>core.atomic</string>
       <string>core.bitop</string>
@@ -214,7 +222,6 @@
       <string>core.sync.mutex</string>
       <string>core.sync.rwmutex</string>
       <string>core.sync.semaphore</string>
-      <string>etc.curl</string>
     </array>
 	  <key>BBLMSuffixMap</key>
 	  <array>
