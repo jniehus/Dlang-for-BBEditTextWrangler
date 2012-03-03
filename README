@@ -1,0 +1,7 @@
+DCodelessLanguageModule.plist is a simple syntax highlighter for the "D Programming Language" that can be used in either BBEdit or its free version, TextWrangler.
+
+Installation:
+BBEdit: copy the plist to "~/Library/Application Support/BBEdit/Language Modules"
+TextWrangler: copy the plist to "~/Library/Application Support/TextWrangler/Language Modules"
+
+Then launch either app and goto "Preferences" -> "Languages" and then add the suffix mapping for the "D Programming Language" by setting the suffix to d (di too if you want)
