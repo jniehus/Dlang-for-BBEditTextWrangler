@@ -126,7 +126,7 @@ private string plistBlocks = "    </array>
             (?&gt;	r\"	(?s: \\\\. | [^\"] )*?		(?: \" | \\z)	) |
             (?&gt;   '  (?s: \\\\. | [^']  )*?    (?: '  | \\z) ) |
             (?&gt;	q\"	(?s: \\\\. | [^\"] )*?		(?: \" | \\z)	) |
-            (?&gt;	q{	(?s: \\\\. | [^}]  )*?		(?: }  | \\z)	)
+            (?&gt;  q{ .* }(?!})  )
         )</string>
     </dict>
 </dict>
@@ -200,7 +200,8 @@ void main()
     
     std.xml.check(plist);    
     std.stream.File f = new std.stream.File();
-    f.create("DCodelessLanguageModule.plist");
+    string bbeditLoc = "DCodelessLanguageModule.plist";
+    f.create(bbeditLoc);
     f.writeString(plist);
     writeln(plist);
     
