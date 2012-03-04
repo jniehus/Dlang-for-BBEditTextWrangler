@@ -5,3 +5,8 @@ BBEdit: copy the plist to "~/Library/Application Support/BBEdit/Language Modules
 TextWrangler: copy the plist to "~/Library/Application Support/TextWrangler/Language Modules"
 
 Then launch either app and goto "Preferences" -> "Languages" and then add the suffix mapping for the "D Programming Language" by setting the suffix to d (di too if you want)
+
+-- BUG --
+nested { for Token strings break highlighting. Example:
+writeln(q{ foo(q{hello}); }); // will stop highlight at first }
+These are dumb plists files so will probably will never have a solution
