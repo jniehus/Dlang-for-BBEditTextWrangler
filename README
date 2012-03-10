@@ -10,6 +10,12 @@ Then launch either app and goto "Preferences" -> "Languages" and then add the su
 nested { for Token strings break highlighting. 
 Example:
 writeln(q{ foo(q{hello}); }); // will stop highlight at first }
+
+Structs ending with q and no space before { will break highlighting
+Example
+struct Fooq{ int x = 3; } // should be "struct Fooq { int x = 3; }" anyway
+but writing code like that is bad taste so its a feature :)
+
 These are dumb plists files so there will probably never be a fix.
 *WORKAROUND: escape each nested } then remove escapes after final } is in place... 
 
